@@ -22,7 +22,7 @@ def get_psnr(img1, img2, min_value=0, max_value=255):
     PIXEL_MAX = max_value - min_value
     return 10 * log10((PIXEL_MAX ** 2) / mse)
 
-
+# I get set5 in this site (http://vllab.ucmerced.edu/wlai24/LapSRN/)
 origin_test_dir = 'Set5'
 origin_tests = [join(origin_test_dir, x) for x in sorted(listdir(origin_test_dir))]
 
