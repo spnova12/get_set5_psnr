@@ -30,9 +30,10 @@ psnrs = []
 
 for origin_test in origin_tests:
     img_hr = cv2.imread(origin_test, cv2.IMREAD_COLOR)
-    resize = Resize(4)
 
+    resize = Resize(4)
     resize_inverse = Resize(1 / 4)
+    
     img_lr = resize(img_hr)
     img_hr_new = resize_inverse(img_lr)
 
